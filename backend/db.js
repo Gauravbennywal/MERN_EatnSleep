@@ -1,5 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://eatnsleep:EatnSleep@cluster0.abi1dr6.mongodb.net/eatnsleepmern?retryWrites=true&w=majority';
+const { mongoURI } = process.env;
+
 
 async function connectDB() {
   try {
